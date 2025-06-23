@@ -14,3 +14,4 @@ docker run -d \
   student-app
 #to get into sql terminal
 mysql -h database-1.cfos6m6q4or2.ap-south-1.rds.amazonaws.com -u admin -p 
+Deployed application link:- http://3.110.90.83:8080/
