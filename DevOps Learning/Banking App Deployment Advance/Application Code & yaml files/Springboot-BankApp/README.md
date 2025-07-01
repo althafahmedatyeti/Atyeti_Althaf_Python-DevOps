@@ -1,6 +1,14 @@
-Spring Boot Bank App on EKS with ArgoCD, RDS & Grafana
-Deploys a Spring Boot-based banking app on Amazon EKS with ArgoCD for automated GitOps-driven deployments.
-Uses AWS RDS (MySQL) for a scalable, managed relational database backend.
-Integrates Prometheus and Grafana for real-time monitoring, visualization, and metrics of the app and cluster.
-Offers user registration, deposits, withdrawals, transfers, and transactIon history via RESTful APIs.
-Built using Spring Boot, Docker, Kubernetes, ArgoCD, AWS RDS, and Grafana—a complete end-to-end DevOps project.
+# Spring Boot Bank Application - EKS Deployment with ArgoCD, RDS and Grafana
+
+This project demonstrates how to deploy a Spring Boot-based Bank Application with AWS RDS as the database on an Amazon EKS cluster, using ArgoCD for GitOps-based continuous delivery and Grafana for monitoring.
+
+---
+
+## Features
+
+- User Registration & Authentication – Register and log in with secure credentials.
+- Banking Operations – Deposit, withdraw, and transfer funds between accounts.
+- Transaction History – View a complete log of all transactions.
+- Continuous Delivery – ArgoCD automates Kubernetes deployments using GitOps.
+- Monitoring – Grafana and Prometheus provide real-time metrics and dashboards.
+- Managed Database – Uses AWS RDS (MySQL) for persistent and scalable storage.
