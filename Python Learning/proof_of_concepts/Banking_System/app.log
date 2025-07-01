@@ -1,0 +1,4 @@
+2025-05-15 17:26:16,503- INFO-Account created successfully : ID=1,name=chintu
+2025-05-15 17:26:23,170- INFO-Withdrew ₹99 from account ID=1. New balance: ₹1
+2025-05-15 17:26:35,794- INFO-Balance checked for ID=1
+2025-05-15 17:26:41,740- INFO-Displaying all accounts
