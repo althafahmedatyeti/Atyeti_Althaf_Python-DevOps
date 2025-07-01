@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DevOps Learning/Banking App Deployment Advance/Application Code &amp; yaml files/Springboot-BankApp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pairprogramming/LogProject" vcs="Git" />
   </component>
 </project>
