@@ -1,5 +1,5 @@
 
-............................................Spring Boot Bank App on EKS with ArgoCD, RDS & Grafana.......................................
+Spring Boot Bank App on EKS with ArgoCD, RDS & Grafana
 Deploys a Spring Boot-based banking app on Amazon EKS with ArgoCD for automated GitOps-driven deployments.
 
 Uses AWS RDS (MySQL) for a scalable, managed relational database backend.
