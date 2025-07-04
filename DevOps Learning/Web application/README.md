@@ -1,4 +1,4 @@
-Web Application Deployment using Terraform & GitHub Actions (CI/CD)
+******Web Application Deployment using Terraform & GitHub Actions (CI/CD)
 This project demonstrates an automated CI/CD pipeline to deploy a containerized web application to AWS ECS Fargate using:
 
 Terraform for infrastructure provisioning
