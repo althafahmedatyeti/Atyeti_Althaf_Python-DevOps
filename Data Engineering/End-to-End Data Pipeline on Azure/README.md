@@ -18,23 +18,11 @@ Power BI dashboards were developed for interactive and insightful data visualiza
 
 🛠️ Technologies & Tools Utilized
 Component	Purpose
-Azure Data Factory	Orchestrated pipelines for ingestion from GitHub to Azure Data Lake (Bronze)
-Azure Databricks (PySpark)	Transformed raw data into optimized Delta Lake format (Silver)
-Azure Synapse Analytics	Built analytical models and served curated data (Gold)
-Azure Data Lake Storage Gen2	Centralized data lake for all storage layers
+Azure Data Factory(Aznze),
+Azure Databricks (PySpark)	
+Azure Synapse Analytics	Built analytical models 
+Azure Data Lake Storage Gen2	
 Power BI	Created dashboards to visualize KPIs and trends
-
-
-🧠 Key Learnings & Skills Acquired
-Gained hands-on experience with the modern data engineering stack on Azure.
-
-Mastered PySpark for distributed data transformation and feature engineering.
-
-Learned how to design and implement efficient data pipelines for batch and incremental loads.
-
-Built interactive Power BI dashboards, applying data modeling and DAX measures for insight delivery.
-
-Developed strong understanding of data governance, storage optimization, and pipeline monitoring in cloud environments.
 
 📈 Project Outcome
 This end-to-end solution delivers a scalable, secure, and modular data engineering pipeline on Azure, enabling enterprise-grade data processing and analytics. The curated data and Power BI dashboards provide stakeholders with real-time insights and decision support, demonstrating best practices in modern cloud-based data engineering.
