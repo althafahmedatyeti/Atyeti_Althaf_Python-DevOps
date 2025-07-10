@@ -19,9 +19,9 @@ Power BI dashboards were developed for interactive and insightful data visualiza
 🛠️ Technologies & Tools Utilized
 Component	Purpose
 Azure Data Factory(Aznze),
-Azure Databricks (PySpark)	
-Azure Synapse Analytics	Built analytical models 
-Azure Data Lake Storage Gen2	
+Azure Databricks (PySpark),
+Azure Synapse Analytics	Built analytical models, 
+Azure Data Lake Storage Gen2	,
 Power BI	Created dashboards to visualize KPIs and trends
 
 📈 Project Outcome
