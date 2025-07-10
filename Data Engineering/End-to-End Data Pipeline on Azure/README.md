@@ -1,4 +1,4 @@
-🏗️ ##End-to-End Data Engineering Pipeline on Microsoft Azure
+### End-to-End Data Engineering Pipeline on Microsoft Azure
 This project showcases the design and implementation of a robust, scalable, and production-grade data engineering pipeline using the Microsoft Azure ecosystem. The solution is built on a layered data lake architecture and demonstrates real-world data transformation and analytical capabilities using the AdventureWorks dataset.
 
 ✅ Project Overview
