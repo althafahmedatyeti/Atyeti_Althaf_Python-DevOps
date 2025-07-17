@@ -1,0 +1,79 @@
+# 🚀 IoT Live Stream Data Pipeline with PySpark and BigQuery
+
+This project implements a real-time data processing pipeline for IoT sensor data using PySpark on Google Cloud Platform (GCP). The pipeline performs transformations to detect anomalies and system failures, and writes the enriched data to Google BigQuery for analytics.
+
+---
+## 🌍 Data Source
+
+- The incoming data simulates **IoT devices deployed across Hyderabad city**.
+- These virtual devices continuously monitor environmental parameters such as **temperature, pressure, CO₂ levels, and harmful gases**.
+- **A Python-based data generator runs 24/7**, emulating near real-time streaming of sensor data to **Google Cloud Pub/Sub**.
+- The incoming data originates from **IoT devices deployed across Hyderabad city**.
+- These devices continuously monitor and send environmental sensor data, such as:
+  - `CO₂ levels`
+  - `Temperature`
+  - `Pressure`
+  - `Harmful Gases (like NO₂, SO₂)` ✅ *(newly added)*
+- The data is published to **Google Cloud Pub/Sub** in JSON format.
+- **Purpose**: To monitor environmental conditions and detect the presence of harmful gases affecting public health and safety.
+---
+## 📦 Features
+
+- Ingests real-time IoT data from Pub/Sub.
+- Detects anomalies like:
+  - Constant temperature (temp stuck)
+  - Constant pressure (pressure stuck)
+- Detects harmful gas emissions and flags them.
+- Flags device/system failures based on anomaly patterns.
+- Writes enriched data to:
+  - Google Cloud Storage (GCS)
+  - Google BigQuery
+---
+## 📊 Output Schema
+Final enriched dataset includes:
+
+- `device_id`
+- `event_time`
+- `temperature`
+- `pressure`
+- `co2_level`
+- `harmful_gas_detected` ✅ *(newly added)*
+- `is_temp_stuck`
+- `is_pressure_stuck`
+- `sensor_failure`
+- `system_failure`
+
+---
+
+## 🛠 Technologies Used
+
+- **Google Cloud Platform (GCP)**:
+  - Cloud Pub/Sub
+  - Cloud Storage (GCS)
+  - Dataproc (Spark cluster)
+  - BigQuery
+- **Apache Spark (PySpark Streaming)**
+- **Python**
+
+---
+
+📘 Learnings
+During the development of this real-time IoT data pipeline project on Google Cloud Platform, the following key concepts and tools were learned and applied:
+
+PySpark Structured Streaming: Used for real-time processing and window-based anomaly detection.
+
+Google Cloud Pub/Sub: Ingested live streaming data from simulated IoT devices.
+
+Google Cloud Storage (GCS): Stored transformed and intermediate output files.
+
+Google Dataproc: Ran PySpark jobs in a scalable Hadoop/Spark cluster environment.
+
+Google BigQuery: Final sink for enriched sensor data; used for advanced analytics and dashboarding.
+
+Window Functions: Implemented to detect stuck sensor values over time.
+
+System Failure Detection: Designed logic to flag temperature and pressure anomalies.
+
+Data Pipeline Design: Understood end-to-end architecture from ingestion to visualization.
+
+This project enhanced my understanding of building cloud-native, scalable, and real-time data sy
