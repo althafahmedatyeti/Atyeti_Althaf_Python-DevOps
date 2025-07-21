@@ -1,79 +1,116 @@
-# 🚀 IoT Live Stream Data Pipeline with PySpark and BigQuery
+# 🚀 IoT Live Stream Data Pipeline with PySpark, BigQuery & Airflow
 
-This project implements a real-time data processing pipeline for IoT sensor data using PySpark on Google Cloud Platform (GCP). The pipeline performs transformations to detect anomalies and system failures, and writes the enriched data to Google BigQuery for analytics.
+This project implements a real-time data processing pipeline for IoT sensor data using **PySpark** on **Google Cloud Platform (GCP)**. The pipeline detects anomalies and system failures and writes the enriched data to **Google BigQuery** for downstream analytics.
 
 ---
+
 ## 🌍 Data Source
 
 - The incoming data simulates **IoT devices deployed across Hyderabad city**.
-- These virtual devices continuously monitor environmental parameters such as **temperature, pressure, CO₂ levels, and harmful gases**.
-- **A Python-based data generator runs 24/7**, emulating near real-time streaming of sensor data to **Google Cloud Pub/Sub**.
-- The incoming data originates from **IoT devices deployed across Hyderabad city**.
-- These devices continuously monitor and send environmental sensor data, such as:
-  - `CO₂ levels`
+- Devices monitor and send sensor data including:
   - `Temperature`
   - `Pressure`
-  - `Harmful Gases (like NO₂, SO₂)` ✅ *(newly added)*
-- The data is published to **Google Cloud Pub/Sub** in JSON format.
-- **Purpose**: To monitor environmental conditions and detect the presence of harmful gases affecting public health and safety.
+  - `CO₂ levels`
+  - `Harmful Gases (NO₂, SO₂)` ✅ *(newly added)*
+- Data is published in **JSON format** to **Google Cloud Pub/Sub** via a Python-based generator running 24/7.
+- **Purpose**: Monitor environmental conditions and detect harmful gas emissions for public health and safety.
+
 ---
+
 ## 📦 Features
 
-- Ingests real-time IoT data from Pub/Sub.
-- Detects anomalies like:
+- 🔄 Real-time ingestion from **Pub/Sub**
+- 🧠 Anomaly detection:
   - Constant temperature (temp stuck)
   - Constant pressure (pressure stuck)
-- Detects harmful gas emissions and flags them.
-- Flags device/system failures based on anomaly patterns.
-- Writes enriched data to:
-  - Google Cloud Storage (GCS)
-  - Google BigQuery
----
-## 📊 Output Schema
-Final enriched dataset includes:
+- ☠️ Detection of **harmful gas emissions**
+- 🔧 System/device failure identification based on anomalies
+- 📤 Writes enriched output to:
+  - **Cloud Storage**
+  - **BigQuery**
 
-- `device_id`
-- `event_time`
-- `temperature`
-- `pressure`
-- `co2_level`
-- `harmful_gas_detected` ✅ *(newly added)*
-- `is_temp_stuck`
-- `is_pressure_stuck`
-- `sensor_failure`
-- `system_failure`
 
----
+## 🛠️ Technologies Used
 
-## 🛠 Technologies Used
-
-- **Google Cloud Platform (GCP)**:
+- **GCP Services**:
   - Cloud Pub/Sub
   - Cloud Storage (GCS)
-  - Dataproc (Spark cluster)
+  - Dataproc (PySpark Cluster)
   - BigQuery
-- **Apache Spark (PySpark Streaming)**
+- **PySpark Structured Streaming**
+- **Airflow (Apache Airflow - Composer)**
 - **Python**
 
 ---
 
-📘 Learnings
-During the development of this real-time IoT data pipeline project on Google Cloud Platform, the following key concepts and tools were learned and applied:
+## 🎛️ Airflow Automation for Cluster Scheduling
 
-PySpark Structured Streaming: Used for real-time processing and window-based anomaly detection.
+To optimize cost and resource management, **Airflow DAGs** have been added to automatically manage **Dataproc clusters**:
 
-Google Cloud Pub/Sub: Ingested live streaming data from simulated IoT devices.
+### ✅ `start_cluster_dag.py`
+- 🔁 **Scheduled at 5:00 AM daily**
+- 📌 Starts the `iot-processing-cluster` on Dataproc
+- 🔧 Uses: `DataprocStartClusterOperator`
 
-Google Cloud Storage (GCS): Stored transformed and intermediate output files.
+### 🛑 `stop_cluster_dag.py` *(Recommended)*for 
+## 🛠️ Technologies Used
 
-Google Dataproc: Ran PySpark jobs in a scalable Hadoop/Spark cluster environment.
+- **GCP Services**:
+  - Cloud Pub/Sub
+  - Cloud Storage (GCS)
+  - Dataproc (PySpark Cluster)
+  - BigQuery
+- **PySpark Structured Streaming**
+- **Airflow (Apache Airflow - Composer)**
+- **Python**
 
-Google BigQuery: Final sink for enriched sensor data; used for advanced analytics and dashboarding.
+---
 
-Window Functions: Implemented to detect stuck sensor values over time.
+## 🎛️ Airflow Automation for Cluster Scheduling
 
-System Failure Detection: Designed logic to flag temperature and pressure anomalies.
+To optimize cost and resource management, **Airflow DAGs** have been added to automatically manage **Dataproc clusters**:
 
-Data Pipeline Design: Understood end-to-end architecture from ingestion to visualization.
+### ✅ `start_cluster_dag.py`
+- 🔁 **Scheduled at 5:00 AM daily**
+- 📌 Starts the `iot-processing-cluster` on Dataproc
+- 🔧 Uses: `DataprocStartClusterOperator`
 
-This project enhanced my understanding of building cloud-native, scalable, and real-time data sy
+### 🛑 `stop_cluster_dag.py` *(Optional/Recommended)*
+## 🛠️ Technologies Used
+
+- **GCP Services**:
+  - Cloud Pub/Sub
+  - Cloud Storage (GCS)
+  - Dataproc (PySpark Cluster)
+  - BigQuery
+- **PySpark Structured Streaming**
+- **Airflow (Apache Airflow - Composer)**
+- **Python**
+
+---
+
+## 🎛️ Airflow Automation for Cluster Scheduling
+
+To optimize cost and resource management, **Airflow DAGs** have been added to automatically manage **Dataproc clusters**:
+
+### ✅ `start_cluster_dag.py`
+- 🔁 **Scheduled at 5:00 AM daily**
+- 📌 Starts the `iot-processing-cluster` on Dataproc
+- 🔧 Uses: `DataprocStartClusterOperator`
+
+### 🛑 `stop_cluster_dag.py` *(Recommended)* for cost optimization
+- 🔁 **Scheduled at 2:00 AM daily**
+- 📌 Stops the cluster to reduce costs
+- 🔧 Uses: `DataprocStopClusterOperator`
+
+> Airflow enables automated orchestration, ensuring your cluster runs only during processing windows.
+- 🔁 **Scheduled at 2:00 AM daily**
+- 📌 Stops the cluster to reduce costs
+- 🔧 Uses: `DataprocStopClusterOperator`
+
+> Airflow enables automated orchestration, ensuring your cluster runs only during processing windows.
+- 🔁 **Scheduled at 2:00 AM daily**
+- 📌 Stops the cluster to reduce costs
+- 🔧 Uses: `DataprocStopClusterOperator`
+
+> Airflow enables automated orchestration, ensuring your cluster runs only during processing windows.
