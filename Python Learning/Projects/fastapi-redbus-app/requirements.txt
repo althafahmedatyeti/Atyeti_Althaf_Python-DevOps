@@ -1,5 +1,0 @@
-pip install python-dotenv
-python -m pip install cryptography
-pip install python-jose[cryptography]
-pip install bcrypt
-pip install passlib
