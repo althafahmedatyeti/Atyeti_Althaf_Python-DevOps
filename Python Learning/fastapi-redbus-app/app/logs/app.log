@@ -1,0 +1,91 @@
+2025-08-06 18:05:30,319 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 10:36:38,860 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 10:36:42,155 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 10:37:23,989 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 10:37:25,883 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:37:18,814 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:37:20,211 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:40:28,267 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:40:29,873 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:42:29,485 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:42:31,120 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:54:13,827 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 11:54:15,111 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:10:02,719 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:10:04,105 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:12:04,937 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:12:06,661 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:32:02,215 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:32:52,463 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:32:56,421 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:43:20,375 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:45:06,298 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 12:51:09,346 - INFO - api.user_routes - Attempting login for user with email: vamshi@gmail.com
+2025-08-07 12:51:09,386 - ERROR - services.user_service - Login failed due to error: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.user_id AS users_user_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'vamshi@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-07 12:51:09,389 - WARNING - api.user_routes - Login failed for user vamshi@gmail.com: Login failed due to server error.
+2025-08-07 12:51:23,442 - INFO - api.user_routes - Attempting login for user with email: vamshi@gmail.com
+2025-08-07 12:51:23,446 - ERROR - services.user_service - Login failed due to error: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.user_id AS users_user_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'vamshi@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-07 12:51:23,448 - WARNING - api.user_routes - Login failed for user vamshi@gmail.com: Login failed due to server error.
+2025-08-07 12:55:36,636 - INFO - api.user_routes - Attempting login for user with email: vamshi@gmail.com
+2025-08-07 12:55:36,642 - ERROR - services.user_service - Login failed due to error: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.user_id AS users_user_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'vamshi@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-07 12:55:36,644 - WARNING - api.user_routes - Login failed for user vamshi@gmail.com: Login failed due to server error.
+2025-08-07 12:58:34,679 - INFO - api.user_routes - Attempting to register user with email: alt@gmail.com
+2025-08-07 12:58:34,686 - ERROR - services.user_service - Error while creating user: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.user_id AS users_user_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'alt@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-07 12:58:34,689 - ERROR - api.user_routes - User registration failed for email alt@gmail.com: 500: Internal server error.
+2025-08-07 16:58:05,980 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 17:01:48,653 - INFO - api.user_routes - Attempting login for user with email: vamshi@gmail.com
+2025-08-07 17:01:48,700 - WARNING - passlib.handlers.bcrypt - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\MohammedAlthafAhmed\AppData\Roaming\Python\Python313\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-08-07 17:01:50,078 - INFO - utils.jwt_token - JWT token created successfully.
+2025-08-07 17:01:50,080 - INFO - services.user_service - Login successful for user: vamshi@gmail.com
+2025-08-07 17:01:50,082 - INFO - api.user_routes - Login successful for user with email: vamshi@gmail.com
+2025-08-07 17:03:56,562 - INFO - services.bus_service - Searching buses from hyd to pune on 2025-8-8
+2025-08-07 17:03:56,573 - INFO - services.booking_summary_service - Creating booking summary for bus_id=1, travel_date=2025-8-8
+2025-08-07 17:03:56,586 - INFO - services.booking_service - Checking available seats for bus 1 on 2025-8-8
+2025-08-07 17:03:56,599 - INFO - services.booking_summary_service - Bus 1 on 2025-08-08: 0 booked, 40 available.
+2025-08-07 17:03:56,611 - INFO - services.booking_summary_service - Creating new summary for bus 1 on 2025-08-08.
+2025-08-07 17:03:56,636 - INFO - services.booking_summary_service - Summary committed successfully for bus 1.
+2025-08-07 17:03:56,637 - INFO - services.bus_service - Found 1 summaries.
+2025-08-07 17:04:33,483 - INFO - utils.jwt_token - JWT token verified successfully.
+2025-08-07 17:04:33,484 - INFO - utils.auth_dependencies - User authenticated successfully. Payload: {'user_id': 3, 'email': 'vamshi@gmail.com', 'role': 'user', 'exp': 1754568109}
+2025-08-07 17:04:33,487 - INFO - services.booking_service - Attempting to book seat 1 on bus 1 for user 3
+2025-08-07 17:04:33,521 - INFO - services.booking_service - Booking successful: 8
+2025-08-07 17:05:01,853 - INFO - services.bus_service - Searching buses from hyd to pune on 2025-8-8
+2025-08-07 17:05:01,862 - INFO - services.booking_summary_service - Creating booking summary for bus_id=1, travel_date=2025-8-8
+2025-08-07 17:05:01,871 - INFO - services.booking_service - Checking available seats for bus 1 on 2025-8-8
+2025-08-07 17:05:01,878 - INFO - services.booking_summary_service - Bus 1 on 2025-08-08: 1 booked, 39 available.
+2025-08-07 17:05:01,887 - INFO - services.booking_summary_service - Updating existing summary for bus 1 on 2025-08-08.
+2025-08-07 17:05:01,926 - INFO - services.booking_summary_service - Summary committed successfully for bus 1.
+2025-08-07 17:05:01,929 - INFO - services.bus_service - Found 1 summaries.
+2025-08-07 17:05:29,885 - INFO - utils.jwt_token - JWT token verified successfully.
+2025-08-07 17:05:29,886 - INFO - utils.auth_dependencies - User authenticated successfully. Payload: {'user_id': 3, 'email': 'vamshi@gmail.com', 'role': 'user', 'exp': 1754568109}
+2025-08-07 17:19:41,480 - INFO - redbus-app -  RedBus API started successfully!
+2025-08-07 17:24:59,057 - INFO - redbus-app -  RedBus API started successfully!
